@@ -1,9 +1,9 @@
 # SystemVerilog and Verification - Alternative Assesment Tool
-Name : Vishnu Prakash Bharadwaj
-USN : 1BM21EC209
-Course : SVV
-Course Code : 22EC6PE2SV
-Faculty Incharge : Dr. Jeeru Dinesh Reddy
+Name : Vishnu Prakash Bharadwaj <br>
+USN : 1BM21EC209 <br>
+Course : SVV <br>
+Course Code : 22EC6PE2SV <br>
+Faculty Incharge : Dr. Jeeru Dinesh Reddy <br>
 
 ## Problem statements
 1. Identify a transactor that helps in verifying a DUT that sorts 8 bit values on A,B,C,D,E,F,G and H in ascending order. Implement the test environment that handles all the possible cases.
