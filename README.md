@@ -1,4 +1,4 @@
-# SystemVerilog and Verification - Alternative Assesment Tool
+# SystemVerilog and Verification - AAT
 Name : Vishnu Prakash Bharadwaj <br>
 USN : 1BM21EC209 <br>
 Course : SVV <br>
