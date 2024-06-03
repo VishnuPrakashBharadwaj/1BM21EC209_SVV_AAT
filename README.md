@@ -32,3 +32,5 @@ Faculty Incharge : Dr. Jeeru Dinesh Reddy <br>
    
    Waveform for reference:
    ![Screenshot 2024-06-02 210733](https://github.com/VishnuPrakashBharadwaj/1BM21EC209_SVV_AAT/assets/39427770/8601cae3-fa81-484c-84a4-7216b7d63536)
+
+## Solutions
