@@ -1,0 +1,4 @@
+class generator;
+
+endclass
+
