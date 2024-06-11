@@ -18,7 +18,7 @@ Faculty Incharge : Dr. Jeeru Dinesh Reddy <br>
    - Design a transactor for driving this random input.
    - Apply constraints to the randomized data to verify the required scenarios.
    - How do we verify this property through assertions?
-4. There is a 3-bit up-down counter that is controlled with an enable(en) and mode(M). The verilog behavior described for the design is as given below:
+3. There is a 3-bit up-down counter that is controlled with an enable(en) and mode(M). The verilog behavior described for the design is as given below:
    ```verilog
    module cnt_up_dwn(input clk, rst, en, M, output [2:0] count);
       reg[2:0] R;
