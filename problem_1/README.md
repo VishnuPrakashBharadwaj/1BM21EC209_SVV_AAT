@@ -7,8 +7,8 @@ Identify a transactor that helps in verifying a DUT that sorts 8 bit values on A
 ### RTL for 8 Input sorter
 This is the hardware implementation of bubble-sort containing seven stages of bubbling the highest value. The basic element in this design is a Two Element Sorter (TES) which sorts two 8-bit elements.
 
-![Two Element Sorter](Schematics/tes.png) 
+![Two Element Sorter](Schematics/tes.png | width=50) 
 
 Using the above TES blocks in 7 stages, we can sort 8 8-bit inputs as described below.
 
-![8 input Sorter](Schematics/eight_input_sorter.png) 
+![8 input Sorter](Schematics/eight_input_sorter.png | width=50) 
