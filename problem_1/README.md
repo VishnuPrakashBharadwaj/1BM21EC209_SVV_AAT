@@ -19,7 +19,7 @@ Using the above TES blocks in 7 stages, we can sort 8 8-bit inputs as described 
 - The Driver class is used for performing the circular shift on inputs and driving them through the interface to the DUT. The inputs are randomized at the time of transactor initialization and then circular shift is performed 8 times, to verify the sorting functionality of the DUT.
 - The Transactor class is used for the generation of stimulus. The inputs are randomized at the start, and then circular shifted 8 times.
 
-<img src="Schematics/environments.png" width="40%" height="40%">
+<img src="Schematics/environments.png" width="50%" height="50%">
 
 ## Results
 The verification process is done using Cadence Xcelium tool. A default seed is used for randomizing the inputs. The output of the Xcelium tool is as described below.
