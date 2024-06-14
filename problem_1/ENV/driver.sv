@@ -1,5 +1,4 @@
 `include "transactor.sv"
-`include "sorter_if.sv"
 
 class driver;
 
@@ -36,12 +35,12 @@ class driver;
 			//	$display("RANDOMIZATION FAILED");
 			//end
 
-			#1 $display("\nFROM DRIVER: SENT INPUTS TO DUT: %b %b %b %b %b %b %b %b\n", dr_if.a0, dr_if.a1, dr_if.a2, dr_if.a3, dr_if.a4, dr_if.a5, dr_if.a6, dr_if.a7);
+			#1 $display("FROM DRIVER: SENT INPUTS TO DUT: %d %d %d %d %d %d %d %d", dr_if.a0, dr_if.a1, dr_if.a2, dr_if.a3, dr_if.a4, dr_if.a5, dr_if.a6, dr_if.a7);
 
 		// repeat (2) @(posedge dr_if.clk);
-		$display("SORTED OUTPUT RECEIVED from DUT: %b %b %b %b %b %b %b %b\n", dr_if.y0, dr_if.y1, dr_if.y2, dr_if.y3, dr_if.y4, dr_if.y5, dr_if.y6, dr_if.y7);
+		$display("SORTED OUTPUT RECEIVED from DUT: %b %b %b %b %b %b %b %b", dr_if.y0, dr_if.y1, dr_if.y2, dr_if.y3, dr_if.y4, dr_if.y5, dr_if.y6, dr_if.y7);
 
-		$display("**********TRANSACTION DONE***************\n\n");
+		$display("**********TRANSACTION DONE***************\n");
     end
   endtask
 endclass

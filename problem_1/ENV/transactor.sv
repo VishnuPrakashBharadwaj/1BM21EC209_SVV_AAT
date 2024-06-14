@@ -19,7 +19,7 @@ class transactor;
 	task disp;
 		begin
 			$display("**********NEW TRANSACTION***************\n");
-			$display("FROM TRANSACTOR: INPUTS GENERATED = %d %d %d %d %d %d %d %d", a0, a1, a2, a3, a4, a5, a5, a7);
+			$display("FROM TRANSACTOR: INPUTS GENERATED = %d %d %d %d %d %d %d %d", a0, a1, a2, a3, a4, a5, a6, a7);
 		end
 	endtask
 

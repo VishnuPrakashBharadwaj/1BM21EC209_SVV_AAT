@@ -2,7 +2,6 @@
 	Author : Vishnu Prakash Bharadwaj
 	Module : stage4.sv
 */
-`include "tes.sv"
 
 module stage4(
 	input [7:0] a0,

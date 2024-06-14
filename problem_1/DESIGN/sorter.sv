@@ -10,7 +10,6 @@
 `include "stage5.sv"
 `include "stage6.sv"
 `include "tes.sv"
-`include "sorter_if.sv"
 
 
 module sorter(sorter_if.DUT_MP sortif);
