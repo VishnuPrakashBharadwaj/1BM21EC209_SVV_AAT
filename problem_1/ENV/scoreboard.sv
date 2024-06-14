@@ -1,4 +1,0 @@
-class scoreboard;
-
-endclass
-
