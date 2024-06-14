@@ -1,7 +1,7 @@
 /*
 	Author : Vishnu Prakash Bharadwaj
 	Module : tes.sv
-	Description : Compares 2 8-bit element and sorts them.
+	Description : Two Element Sorter (TES), Compares 2 8-bit element and sorts them.
 */
 
 module tes(
