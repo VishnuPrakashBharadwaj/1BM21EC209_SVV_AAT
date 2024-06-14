@@ -1,3 +1,6 @@
+`include "sorter_if.sv"
+`include "sorter_test.sv"
+
 module top;
 
 	sorter_if sortif();

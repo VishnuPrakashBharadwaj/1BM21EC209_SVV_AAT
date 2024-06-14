@@ -1,3 +1,6 @@
+`include "transactor.sv"
+`include "sorter_if.sv"
+
 class driver;
 
 	transactor tr_drv; /* Transactor object*/
@@ -27,7 +30,7 @@ class driver;
 			dr_if.a5 = tr_drv.a5;
 			dr_if.a6 = tr_drv.a6;
 			dr_if.a7 = tr_drv.a7;
-			
+
 			tr_drv.disp();
 			//end else begin
 			//	$display("RANDOMIZATION FAILED");

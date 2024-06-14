@@ -1,3 +1,6 @@
+`include "driver.sv"
+`include "sorter_if.sv"
+
 program sorter_test(sorter_if.TEST_MP sortif);
 	driver drv_dut;
 
