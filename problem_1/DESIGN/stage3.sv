@@ -2,6 +2,7 @@
 	Author : Vishnu Prakash Bharadwaj
 	Module : stage3.sv
 */
+`include "tes.sv"
 
 module stage3(
 	input [7:0] a0,

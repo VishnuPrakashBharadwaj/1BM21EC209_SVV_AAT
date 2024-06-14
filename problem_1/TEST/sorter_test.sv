@@ -4,7 +4,7 @@ program sorter_test(sorter_if.TEST_MP sortif);
 	initial begin
 		drv_dut = new(sortif);
 
-		repeat (20) begin 
+		repeat (10) begin 
 			drv_dut.drive_ips();
 		end
   

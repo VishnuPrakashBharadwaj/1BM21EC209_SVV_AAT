@@ -4,6 +4,7 @@
 	Description : Takes 8 inputs and finds the largest number
 	and assigns it to y7.
 */
+`include "tes.sv"
 
 module stage1(
 	input [7:0] a0,

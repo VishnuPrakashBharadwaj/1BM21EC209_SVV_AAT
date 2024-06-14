@@ -12,3 +12,6 @@ This is the hardware implementation of bubble-sort containing seven stages of bu
 Using the above TES blocks in 7 stages, we can sort 8 8-bit inputs as described below.
 
 <img src="Schematics/eight_input_sorter.png" width="70%" height="70%">
+
+### Verification Environment
+

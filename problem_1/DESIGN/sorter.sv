@@ -1,8 +1,16 @@
 /*
 	Author : Vishnu Prakash Bharadwaj
 	Module : sorter.sv
-	Description : Integrates all the stages
+	Description : Integrates all the stages, sorts eight 8-bit inputs
 */
+`include "stage1.sv"
+`include "stage2.sv"
+`include "stage3.sv"
+`include "stage4.sv"
+`include "stage5.sv"
+`include "stage6.sv"
+`include "tes.sv"
+
 
 module sorter(sorter_if.DUT_MP sortif);
 	wire [7:0] s1y0, s1y1, s1y2, s1y3, s1y4, s1y5, s1y6;
