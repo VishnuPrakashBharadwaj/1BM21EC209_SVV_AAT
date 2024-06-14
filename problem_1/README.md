@@ -2,9 +2,9 @@
 ## Problem Statement
 Identify a transactor that helps in verifying a DUT that sorts 8 bit values on A,B,C,D,E,F,G and H in ascending order. Implement the test environment that handles all the possible cases.
 
-## Solution
+# Solution
 
-### RTL for 8 Input sorter
+## RTL for 8 Input sorter
 This is the hardware implementation of bubble-sort containing seven stages of bubbling the highest value. The basic element in this design is a Two Element Sorter (TES) which sorts two 8-bit elements.
 
 <img src="Schematics/tes.png" width="30%" height="30%">
@@ -13,13 +13,13 @@ Using the above TES blocks in 7 stages, we can sort 8 8-bit inputs as described 
 
 <img src="Schematics/eight_input_sorter.png" width="70%" height="70%">
 
-### Verification Environment
+## Verification Environment
 - The verification Environment is built around the DUT (Design Under Test), i.e 8-input sorter.
 - The Interface is used for sending the stimulus to DUT and receiving the response from DUT.
 - The Driver class is used for performing the circular shift on inputs and driving them through the interface to the DUT. The inputs are randomized at the time of transactor initialization and then circular shift is performed 8 times, to verify the sorting functionality of the DUT.
 - The Transactor class is used for the generation of stimulus. The inputs are randomized at the start, and then circular shifted 8 times.
 
-### Results
+## Results
 The verification process is done using Cadence Xcelium tool. A default seed is used for randomizing the inputs. The output of the Xcelium tool is as described below.
 
 ```
@@ -90,5 +90,5 @@ TOOL:	xrun	23.09-s001: Exiting on Jun 14, 2024 at 13:19:11 EDT  (total: 00:00:01
 Done
 ```
 
-### Conclusion
+## Conclusion
 From the above results, it is quite evident that the output is same for the same set of inputs when scrambled. This ensures that the outputs are not stuck for a particular input and the sorted values are correct. Hence, the given design is verified for the above mentioned functionality.
