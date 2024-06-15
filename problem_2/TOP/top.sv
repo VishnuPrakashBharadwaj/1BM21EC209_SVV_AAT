@@ -1,5 +1,5 @@
 `include "even_ones_if.sv"
-`include "even_ones_test"
+`include "even_ones_test.sv"
 
 module top;
     bit clk;
@@ -11,4 +11,4 @@ module top;
     even_ones DUT_IF(evenonesif);
     even_ones_test TEST_IF(evenonesif);
 
-endmodule 
+endmodule

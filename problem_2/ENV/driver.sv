@@ -2,7 +2,7 @@
 
 class driver;
 
-    trans_req tr_drv; /* Transactor object*/
+    transactor tr_drv; /* Transactor object*/
     virtual even_ones_if.TEST_MP dr_if;
     
     // constructor
@@ -16,10 +16,11 @@ class driver;
     task drive_reset;
         begin
             $display("\nRESETTING...");
-            tr_drv.reset_on();
-            @(posedge dr_if.clk);
-            tr_drv.reset_off();
-            $display("RESET DONE.");
+          	dr_if.rst = 1;
+          	repeat(2)@(posedge dr_if.clk);
+            dr_if.rst = 0;
+          	$display("RESET DONE.\n");
+          	$display("------------------------------------------------");
         end
     endtask
 
@@ -27,16 +28,15 @@ class driver;
         begin
             if (tr_drv.randomize()) begin
                 dr_if.in = tr_drv.in;
-                tr_drv.disp();
             end else begin
                 $display("RANDOMIZATION FAILED");
             end
 
-            #1 $display("\nFROM DRIVER: SENT INPUT TO DUT: %b\n", dr_if.req);
+          #1 $display("INPUT SENT TO DUT: %b", dr_if.in);
 
-            repeat (2) @(posedge dr_if.clk);
-            $display("OUTPUT RECEIVED from DUT: %b\n", dr_if.grant);
-            $display("**********TRANSACTION DONE***************\n\n");
+          @(posedge dr_if.clk);
+          $display("OUTPUT RECEIVED from DUT: %b", dr_if.out);
+          $display("------------------------------------------------");
         end
     endtask
 endclass

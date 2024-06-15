@@ -1,12 +1,12 @@
 `include "driver.sv"
 
-program even_ones_test(even_ones_if.TEST_MP sortif);
+program even_ones_test(even_ones_if.TEST_MP evenonesif);
     driver drv_dut;
 
     initial begin
-        drv_dut = new(sortif);
+        drv_dut = new(evenonesif);
         drv_dut.drive_reset();
-		repeat (20) begin 
+      	repeat (30) begin 
             drv_dut.drive_ip();
         end
 		$finish;
