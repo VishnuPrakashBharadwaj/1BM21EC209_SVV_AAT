@@ -16,8 +16,9 @@ class driver;
     task drive_reset;
         begin
             $display("\nRESETTING...");
+          	dr_if.in = 0;
           	dr_if.rst = 1;
-          	repeat(2)@(posedge dr_if.clk);
+          	repeat(2)@(negedge dr_if.clk);
             dr_if.rst = 0;
           	$display("RESET DONE.\n");
           	$display("------------------------------------------------");
@@ -31,12 +32,13 @@ class driver;
             end else begin
                 $display("RANDOMIZATION FAILED");
             end
-
-          #1 $display("INPUT SENT TO DUT: %b", dr_if.in);
-
-          @(posedge dr_if.clk);
-          $display("OUTPUT RECEIVED from DUT: %b", dr_if.out);
-          $display("------------------------------------------------");
+			
+          	$display("INPUT SENT TO DUT: %b", dr_if.in);
+          
+          	@(posedge dr_if.clk);
+            
+          	#2 $display("OUTPUT RECEIVED from DUT: %b", dr_if.out);
+            $display("------------------------------------------------");
         end
     endtask
 endclass

@@ -8,6 +8,5 @@ module even_ones(even_ones_if.DUT_MP evenonesif);
             shift_reg <= {shift_reg[1:0], evenonesif.in};
     end
 
-    // Carry logic
-    assign evenonesif.out = (shift_reg[0] & shift_reg[1]) | (shift_reg[1] & shift_reg[2]) | (shift_reg[2] & shift_reg[0]);
+    assign evenonesif.out = ((~shift_reg[0])&(shift_reg[1]&shift_reg[2]))|((shift_reg[0])&(shift_reg[1]^shift_reg[2]));
 endmodule
