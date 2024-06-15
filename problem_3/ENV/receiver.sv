@@ -1,5 +1,5 @@
 class receiver;
-    function new();
+    task new();
         
-    endfunction //new()
+    endtask //new()
 endclass //receiver

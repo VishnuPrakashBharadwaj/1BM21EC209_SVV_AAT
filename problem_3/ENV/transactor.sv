@@ -8,7 +8,7 @@ class transactor;
     }
 
     function new();
-        $$display("Transactor for counter initiated.");
+        $$display("Transactor for counter instantiated.");
     endfunction //new()
 
     task disp;
