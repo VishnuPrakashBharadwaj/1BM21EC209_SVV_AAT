@@ -1,26 +1,3 @@
-# Problem 2
-## Problem Statement
-If the logic design has streaming 1 bit input through X , then the logic is to detect past two values along with the present value and give Z as 1 if there are exactly 2 ones otherwise 0. <br>
-   Input and Output streams:
-
-   ```
-   X : 0 0 1 0 1 0 1 1 0 1 0 0 0 0 1 0 1 1
-   Z : 0 0 0 0 1 0 1 1 1 1 0 0 0 0 0 0 1 1
-   ```
-
-   - Design a transactor for driving this random input.
-   - Apply constraints to the randomized data to verify the required scenarios.
-   - How do we verify this property through assertions?
-
-# Solution
-
-## RTL for Even Ones Detector
-
-## Verification Environment
-
-## Simulation Results
-The verification process is done using Cadence Xcelium tool. A default seed is used for randomizing the inputs. The output of the Xcelium tool is as described below.
-```
 [2024-06-15 06:01:57 UTC] xrun -Q -unbuffered '-timescale' '1ns/1ns' '-sysv' '-access' '+rw' design.sv testbench.sv  
 TOOL:	xrun	23.09-s001: Started on Jun 15, 2024 at 02:01:57 EDT
 xrun: 23.09-s001: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
@@ -131,6 +108,3 @@ Simulation complete via $finish(1) at time 63 NS + 3
 xcelium> exit
 TOOL:	xrun	23.09-s001: Exiting on Jun 15, 2024 at 02:01:59 EDT  (total: 00:00:02)
 Done
-```
-
-## Conclusion
