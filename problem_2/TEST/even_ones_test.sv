@@ -3,6 +3,12 @@
 program even_ones_test(even_ones_if.TEST_MP evenonesif);
     driver drv_dut;
 
+    property got_even_ones;
+        @ (posedge evenonesif.clk) evenonesif.out == (((~evenonesif.in) & ($past(evenonesif.in) & $past(evenonesif.in, 2)))|((evenonesif.in) & ($past(evenonesif.in) ^ $past(evenonesif.in, 2))));
+    endproperty
+
+    //assert property (@ (posedge evenonesif.clk) ((~evenonesif.out) & ($past(venonesif.out) & $past(venonesif.out, 2)))|((evenonesif.out) & ($past(venonesif.out) ^ $past(venonesif.out, 2))));
+
     initial begin
       	$dumpfile("dump.vcd");
       	$dumpvars;
@@ -10,7 +16,8 @@ program even_ones_test(even_ones_if.TEST_MP evenonesif);
         drv_dut.drive_reset();
       	repeat (30) @(negedge evenonesif.clk) begin 
             drv_dut.drive_ip();
+            assert property (got_even_ones);
         end
-		$finish;
+		    $finish;
     end
 endprogram

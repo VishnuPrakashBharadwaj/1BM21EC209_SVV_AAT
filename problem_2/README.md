@@ -15,6 +15,7 @@ If the logic design has streaming 1 bit input through X , then the logic is to d
 # Solution
 
 ## RTL for Even Ones Detector
+We can make use of shift register to solve the above problem. A 3-bit shift register is defined. At every posedge of clock, the input bit is pushed to the shift register.
 
 ## Verification Environment
 
