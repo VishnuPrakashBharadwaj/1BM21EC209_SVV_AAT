@@ -4,8 +4,8 @@ class transactor;
     bit rst;
 
     constraint in_constraint {
-        //Set the probability of reset being 1
-      in dist { [0:0] := 3, [1:1] := 1 };
+        //Set the probability of input being 0.5
+      in dist { [0:0] := 1, [1:1] := 1 };
     }
 
     task disp;

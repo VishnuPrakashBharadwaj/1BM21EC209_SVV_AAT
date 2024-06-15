@@ -5,7 +5,7 @@ module top;
     bit clk;
 
     initial clk = 0;
-    always #1 clk = ~clk;
+    always #5 clk = ~clk;
 
     even_ones_if evenonesif(clk);
     even_ones DUT_IF(evenonesif);
