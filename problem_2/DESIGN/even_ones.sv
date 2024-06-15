@@ -1,16 +1,9 @@
-/*
-    Author : Vishnu Prakash Bharadwaj
-	Module : even_ones.sv
-	Description : Detects even number of ones based on the current input and past 2 values of the input.
-*/ 
-
 module even_ones(
     input clk,
     input rst,
     input in,
     output out
 );
-
     reg [2:0] shift_reg;
 
     always @(posedge clk or posedge rst) begin
