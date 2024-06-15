@@ -1,3 +1,6 @@
+`include "even_ones_if.sv"
+`include "even_ones_test"
+
 module top;
     bit clk;
 
